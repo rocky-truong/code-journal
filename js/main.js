@@ -18,6 +18,8 @@ function submitHandler(event) {
   };
   data.entries.push(newEntry);
   data.nextEntryId++;
+  $image.setAttribute('src', 'images/placeholder-image-square.jpg');
+  $form.reset();
 }
 
 $photoUrl.addEventListener('input', inputHandler);
