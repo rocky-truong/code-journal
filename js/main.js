@@ -13,9 +13,11 @@ function submitHandler(event) {
   var newEntry = {
     title: $form.elements.title.value,
     image: $form.elements.image.value,
-    notes: $form.elements.notes.value
+    notes: $form.elements.notes.value,
+    entryId: data.nextEntryId
   };
   data.entries.push(newEntry);
+  data.nextEntryId++;
 }
 
 $photoUrl.addEventListener('input', inputHandler);
