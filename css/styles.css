@@ -43,3 +43,11 @@ input,
 textarea {
   border: 1px solid #c4c4c4;
 }
+
+.length {
+  width: 450px;
+}
+
+.submit-button {
+  text-align: right;
+}
