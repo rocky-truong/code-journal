@@ -1,0 +1,45 @@
+* {
+  font-family: 'Proza Libre', sans-serif;
+}
+
+.purple {
+  background-color: #562b81;
+  color: white;
+}
+
+body {
+  background-color: #f0f0f0;
+}
+
+.header {
+  width: 900px;
+  font-size: 12px;
+}
+
+h1 {
+  margin: 12px 0;
+}
+
+.no-bold {
+  font-weight: normal;
+}
+
+img {
+  width: 450px;
+  height: 400px;
+  margin-bottom: 20px;
+}
+
+.title {
+  padding-top: 10px;
+}
+
+label,
+input {
+  margin-bottom: 10px;
+}
+
+input,
+textarea {
+  border: 1px solid #c4c4c4;
+}
