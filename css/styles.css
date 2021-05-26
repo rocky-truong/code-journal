@@ -22,7 +22,7 @@ body {
 img {
   width: 100%;
   margin-bottom: 15px;
-  height: 300px;
+  height: 250px;
 }
 
 input {
@@ -79,4 +79,28 @@ label {
 
 .round-border {
   border-radius: 4px;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.new-button {
+  float: right;
+  text-decoration: none;
+  padding: 5px 8px;
+  text-transform: uppercase;
+  margin-top: 13px;
+  color: white;
+  background-color: #562b81;
+  font-size: 12px;
+}
+
+li {
+  list-style-type: none;
+}
+
+ul {
+  margin: 0;
+  padding-left: 0;
 }
