@@ -11,13 +11,8 @@ body {
   background-color: #f0f0f0;
 }
 
-.header {
-  width: 900px;
+.header-row {
   font-size: 12px;
-}
-
-h1 {
-  margin: 12px 0;
 }
 
 .no-bold {
@@ -25,16 +20,11 @@ h1 {
 }
 
 img {
-  width: 450px;
-  height: 400px;
+  width: 100%;
   margin-bottom: 20px;
+  height: 250px;
 }
 
-.title {
-  padding-top: 10px;
-}
-
-label,
 input {
   margin-bottom: 10px;
 }
@@ -44,10 +34,42 @@ textarea {
   border: 1px solid #c4c4c4;
 }
 
-.length {
-  width: 450px;
+.input {
+  height: 30px;
+  width: 100%;
 }
 
 .submit-button {
   text-align: right;
+}
+
+input:focus,
+textarea:focus {
+  border: 2px solid #562b81;
+  outline: none;
+}
+
+.notes {
+  width: 100%;
+  height: 100px;
+}
+
+#submit {
+  padding: 5px 14px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  margin-top: 10px;
+}
+
+.header {
+  font-size: 14px;
+}
+
+.title {
+  font-size: 22px;
+}
+
+label {
+  display: inline-block;
+  margin-bottom: 10px;
 }
