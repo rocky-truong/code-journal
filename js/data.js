@@ -7,13 +7,13 @@ var data = {
   nextEntryId: 1
 };
 
-var previousDataEntriesJSON = localStorage.getItem('entries-data');
-if (previousDataEntriesJSON !== null) {
-  data.entries = JSON.parse(previousDataEntriesJSON);
+var previousDataJSON = localStorage.getItem('entries-data');
+if (previousDataJSON !== null) {
+  data = JSON.parse(previousDataJSON);
 }
 window.addEventListener('beforeunload', jsonHandler);
 
 function jsonHandler(event) {
-  var dataEntriesJSON = JSON.stringify(data.entries);
-  localStorage.setItem('entries-data', dataEntriesJSON);
+  var dataJSON = JSON.stringify(data);
+  localStorage.setItem('entries-data', dataJSON);
 }
