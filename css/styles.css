@@ -1,0 +1,82 @@
+* {
+  font-family: 'Proza Libre', sans-serif;
+}
+
+.purple {
+  background-color: #562b81;
+  color: white;
+}
+
+body {
+  background-color: #f0f0f0;
+}
+
+.header-row {
+  font-size: 12px;
+}
+
+.no-bold {
+  font-weight: normal;
+}
+
+img {
+  width: 100%;
+  margin-bottom: 15px;
+  height: 300px;
+}
+
+input {
+  margin-bottom: 10px;
+}
+
+input,
+textarea {
+  border: 1px solid #c4c4c4;
+}
+
+.input {
+  height: 30px;
+  width: 100%;
+}
+
+.submit-button {
+  text-align: right;
+}
+
+input:focus,
+textarea:focus {
+  border: 2px solid #562b81;
+  outline: none;
+}
+
+.notes {
+  width: 100%;
+  height: 100px;
+}
+
+#submit {
+  padding: 5px 14px;
+  text-transform: uppercase;
+  margin-top: 10px;
+}
+
+.header {
+  font-size: 14px;
+}
+
+.title {
+  font-size: 22px;
+}
+
+label {
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.no-resize {
+  resize: none;
+}
+
+.round-border {
+  border-radius: 4px;
+}

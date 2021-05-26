@@ -13,11 +13,53 @@
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/layout.css">
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Proza+Libre:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
+  <header class="purple">
+    <div class="container">
+      <div class="row purple header-row">
+        <div class="column-full">
+          <h1 class="no-bold header">Code Journal</h1>
+        </div>
+      </div>
+    </div>
   </header>
   <main>
+    <div class="container">
+      <div data-view="entry-form">
+        <form>
+          <div class="row">
+            <div class="column-full">
+              <h1 class="no-bold title">New Entry</h1>
+            </div>
+          </div>
+          <div class="row">
+            <div class="column-half">
+              <img src="images/placeholder-image-square.jpg" alt="placeholder" id="image">
+            </div>
+            <div class="column-half">
+              <label for="title">Title</label>
+              <input class="input round-border" required name="title" type="text" id="title">
+              <label for="photo-url">Photo URL</label>
+              <input class="input round-border" required name="image" type="text" id="photo-url">
+            </div>
+          </div>
+          <div class="row">
+            <div class="column-full">
+              <label for="notes">Notes</label>
+              <textarea required class="notes no-resize round-border" name="notes" id="notes"></textarea>
+            </div>
+          </div>
+          <div class="row">
+            <div class="column-full submit-button">
+              <input required type="submit" id="submit" value="Save" class="purple round-border">
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
   </main>
   <script src="js/data.js"></script>
   <script src="js/main.js"></script>
