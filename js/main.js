@@ -4,11 +4,12 @@ var $image = document.querySelector('img');
 var $photoUrl = document.querySelector('#photo-url');
 var $form = document.querySelector('form');
 var $ul = document.querySelector('ul');
-var $viewForm = document.querySelector('.view-form');
-var $viewEntries = document.querySelector('.view-entries');
+var $viewForm = document.querySelector('#view-form');
+var $viewEntries = document.querySelector('#view-entries');
 var $entriesLink = document.querySelector('.entries-link');
 var $newButton = document.querySelector('.new-button');
 var $noEntryP = document.querySelector('.no-entry-p');
+var $allView = document.querySelectorAll('.view');
 
 function inputHandler(event) {
   $image.setAttribute('src', event.target.value);
@@ -64,24 +65,26 @@ function loadHandler(event) {
 
 window.addEventListener('DOMContentLoaded', loadHandler);
 
-function entriesHandler(event) {
-  $viewEntries.className = 'view-entries';
-  $viewForm.className = 'view-form hidden';
-  if (data.entries.length === 0) {
-    $noEntryP.className = 'no-entry-p';
-  }
-}
+$entriesLink.addEventListener('click', viewHandler);
 
-$entriesLink.addEventListener('click', entriesHandler);
-
-function newHandler(event) {
-  $viewEntries.className = 'view-entries hidden';
-  $viewForm.className = 'view-form';
-}
-
-$newButton.addEventListener('click', newHandler);
+$newButton.addEventListener('click', viewHandler);
 
 function saveHandler(event) {
   submitHandler();
-  entriesHandler();
+  $viewEntries.setAttribute('class', 'view');
+  $viewForm.setAttribute('class', 'view hidden');
+}
+
+function viewHandler(event) {
+  var dataView = event.target.getAttribute('data-view');
+  for (var i = 0; i < $allView.length; i++) {
+    if ($allView[i].getAttribute('data-view') !== dataView) {
+      $allView[i].className = 'view hidden';
+    } else {
+      $allView[i].className = 'view';
+    }
+  }
+  if (data.entries.length === 0) {
+    $noEntryP.className = 'no-entry-p';
+  }
 }
