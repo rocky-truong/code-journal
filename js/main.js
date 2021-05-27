@@ -3,6 +3,7 @@
 var $image = document.querySelector('img');
 var $photoUrl = document.querySelector('#photo-url');
 var $form = document.querySelector('form');
+var $ul = document.querySelector('ul');
 
 function inputHandler(event) {
   $image.setAttribute('src', event.target.value);
@@ -48,3 +49,12 @@ function renderEntry(entry) {
   $divColumnHalfText.appendChild($p);
   return $li;
 }
+
+function loadHandler(event) {
+  for (var i = 0; i < data.entries.length; i++) {
+    var newTree = renderEntry(data.entries[i]);
+    $ul.appendChild(newTree);
+  }
+}
+
+window.addEventListener('DOMContentLoaded', loadHandler);
