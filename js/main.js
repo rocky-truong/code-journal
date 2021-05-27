@@ -4,6 +4,10 @@ var $image = document.querySelector('img');
 var $photoUrl = document.querySelector('#photo-url');
 var $form = document.querySelector('form');
 var $ul = document.querySelector('ul');
+var $viewForm = document.querySelector('.view-form');
+var $viewEntries = document.querySelector('.view-entries');
+var $entriesLink = document.querySelector('.entries-link');
+var $newButton = document.querySelector('.new-button');
 
 function inputHandler(event) {
   $image.setAttribute('src', event.target.value);
@@ -58,3 +62,17 @@ function loadHandler(event) {
 }
 
 window.addEventListener('DOMContentLoaded', loadHandler);
+
+function entriesHandler(event) {
+  $viewEntries.className = 'view-entries';
+  $viewForm.className = 'view-form hidden';
+}
+
+$entriesLink.addEventListener('click', entriesHandler);
+
+function newHandler(event) {
+  $viewEntries.className = 'view-entries hidden';
+  $viewForm.className = 'view-form';
+}
+
+$newButton.addEventListener('click', newHandler);
