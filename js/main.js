@@ -61,6 +61,13 @@ function loadHandler(event) {
     var newTree = renderEntry(data.entries[i]);
     $ul.appendChild(newTree);
   }
+  for (var x = 0; x < $allView.length; x++) {
+    if ($allView[x].getAttribute('data-view') !== data.view) {
+      $allView[x].className = 'view hidden';
+    } else {
+      $allView[x].className = 'view';
+    }
+  }
 }
 
 window.addEventListener('DOMContentLoaded', loadHandler);
@@ -73,6 +80,7 @@ function saveHandler(event) {
   submitHandler();
   $viewEntries.setAttribute('class', 'view');
   $viewForm.setAttribute('class', 'view hidden');
+  $noEntryP.className = 'no-entry-p hidden';
 }
 
 function viewHandler(event) {
@@ -84,7 +92,7 @@ function viewHandler(event) {
       $allView[i].className = 'view';
     }
   }
-  if (data.entries.length === 0) {
-    $noEntryP.className = 'no-entry-p';
+  if (data.entries.length !== 0) {
+    $noEntryP.className = 'no-entry-p hidden';
   }
 }
