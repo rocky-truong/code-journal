@@ -11,6 +11,12 @@ var $newButton = document.querySelector('.new-button');
 var $noEntryP = document.querySelector('.no-entry-p');
 var $allView = document.querySelectorAll('.view');
 
+$photoUrl.addEventListener('input', inputHandler);
+$form.addEventListener('submit', saveHandler);
+$entriesLink.addEventListener('click', viewHandler);
+$newButton.addEventListener('click', viewHandler);
+window.addEventListener('DOMContentLoaded', loadHandler);
+
 function inputHandler(event) {
   $image.setAttribute('src', event.target.value);
 }
@@ -28,9 +34,6 @@ function submitHandler(event) {
   $form.reset();
   $ul.prepend(renderEntry(newEntry));
 }
-
-$photoUrl.addEventListener('input', inputHandler);
-$form.addEventListener('submit', saveHandler);
 
 function renderEntry(entry) {
   var $li = document.createElement('li');
@@ -68,13 +71,10 @@ function loadHandler(event) {
       $allView[x].className = 'view';
     }
   }
+  if (data.entries.length !== 0) {
+    $noEntryP.className = 'no-entry-p hidden';
+  }
 }
-
-window.addEventListener('DOMContentLoaded', loadHandler);
-
-$entriesLink.addEventListener('click', viewHandler);
-
-$newButton.addEventListener('click', viewHandler);
 
 function saveHandler(event) {
   submitHandler();
@@ -90,6 +90,7 @@ function viewHandler(event) {
       $allView[i].className = 'view hidden';
     } else {
       $allView[i].className = 'view';
+      data.view = $allView[i].getAttribute('data-view');
     }
   }
   if (data.entries.length !== 0) {
