@@ -22,7 +22,7 @@ body {
 img {
   width: 100%;
   margin-bottom: 15px;
-  height: 300px;
+  height: 250px;
 }
 
 input {
@@ -62,6 +62,7 @@ textarea:focus {
 
 .header {
   font-size: 14px;
+  margin-right: 20px;
 }
 
 .title {
@@ -79,4 +80,38 @@ label {
 
 .round-border {
   border-radius: 4px;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.new-button {
+  float: right;
+  text-decoration: none;
+  padding: 5px 8px;
+  text-transform: uppercase;
+  margin-top: 13px;
+  color: white;
+  background-color: #562b81;
+  font-size: 12px;
+}
+
+li {
+  list-style-type: none;
+}
+
+ul {
+  margin: 0;
+  padding-left: 0;
+}
+
+.entries-link {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.no-entry-p {
+  text-align: center;
 }

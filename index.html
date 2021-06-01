@@ -21,14 +21,15 @@
     <div class="container">
       <div class="row purple header-row">
         <div class="column-full">
-          <h1 class="no-bold header">Code Journal</h1>
+          <h1 class="no-bold header inline-block">Code Journal</h1>
+          <a href="#" class="entries-link round-border" data-view="entries">Entries</a>
         </div>
       </div>
     </div>
   </header>
   <main>
     <div class="container">
-      <div data-view="entry-form">
+      <div data-view="entry-form" id="view-form" class="view">
         <form>
           <div class="row">
             <div class="column-full">
@@ -54,10 +55,21 @@
           </div>
           <div class="row">
             <div class="column-full submit-button">
-              <input required type="submit" id="submit" value="Save" class="purple round-border">
+              <input required type="submit" id="submit" data-view="null" value="Save" class="purple round-border">
             </div>
           </div>
         </form>
+      </div>
+      <div data-view="entries" id="view-entries" class="view hidden">
+        <div class="row">
+          <div class="column-full">
+            <h1 class="no-bold title inline-block">Entries</h1>
+            <a href="#" class="new-button round-border" data-view="entry-form">New</a>
+            <p class="no-entry-p">No entries have been recorded.</p>
+          </div>
+        </div>
+        <ul>
+        </ul>
       </div>
     </div>
   </main>
