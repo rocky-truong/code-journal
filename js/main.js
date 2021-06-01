@@ -81,6 +81,7 @@ function saveHandler(event) {
   $viewEntries.setAttribute('class', 'view');
   $viewForm.setAttribute('class', 'view hidden');
   $noEntryP.className = 'no-entry-p hidden';
+  data.view = 'entries';
 }
 
 function viewHandler(event) {
